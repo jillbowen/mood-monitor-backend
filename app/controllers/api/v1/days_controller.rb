@@ -1,4 +1,5 @@
 class Api::V1::DaysController < ApplicationController
+    before_action: :set_day, only: [:show, :destroy]
 
     def index
         @days = Day.all 
@@ -15,12 +16,10 @@ class Api::V1::DaysController < ApplicationController
     end
 
     def show
-        @day = Day.find(params[:id])
         render json: @day
     end
 
     def destroy
-        @day = Day.find(params[:id])
         @day.destroy
     end
 
@@ -28,5 +27,9 @@ class Api::V1::DaysController < ApplicationController
     
     def day_params
         params.require(:day).permit(:date)
+    end
+
+    def set_day
+        @day = Day.find(params[:id])
     end
 end
