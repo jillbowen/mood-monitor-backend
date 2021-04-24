@@ -15,11 +15,12 @@ class Api::V1::DaysController < ApplicationController
     end
 
     def show
-
+        @day = Day.find(params[:id])
+        render json: @day
     end
 
     def destroy
-
+        
     end
 
     private
