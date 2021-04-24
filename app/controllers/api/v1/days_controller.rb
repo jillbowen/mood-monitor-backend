@@ -6,7 +6,12 @@ class Api::V1::DaysController < ApplicationController
     end
 
     def create
-
+        @day = Day.new(day_params)
+        if @day.save
+            render json: @day
+        else
+            render json: {error: 'Error creating new day'}
+        end
     end
 
     def show
