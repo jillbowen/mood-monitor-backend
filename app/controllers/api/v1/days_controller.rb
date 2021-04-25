@@ -1,5 +1,5 @@
 class Api::V1::DaysController < ApplicationController
-    before_action: :set_day, only: [:show, :destroy]
+    before_action :set_day, only: [:show, :destroy]
 
     def index
         @days = Day.all 
