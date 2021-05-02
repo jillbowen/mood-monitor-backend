@@ -1,6 +1,6 @@
 class Api::V1::MoodsController < ApplicationController
 
-    before_action: :set_mood
+    before_action :set_mood
 
     def index
         @moods = @day.moods
