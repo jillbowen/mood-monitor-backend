@@ -1,6 +1,6 @@
 class Api::V1::MoodsController < ApplicationController
 
-    before_action :set_mood
+    before_action :set_mood, :set_day
 
     def index
         @moods = @day.moods
@@ -32,5 +32,9 @@ class Api::V1::MoodsController < ApplicationController
 
     def set_mood
         @mood = Mood.find(params[:day_id])
+    end
+
+    def set_day
+        @day = Day.find(params[:day_id])
     end
 end
