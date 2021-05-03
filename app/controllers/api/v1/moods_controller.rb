@@ -9,7 +9,8 @@ class Api::V1::MoodsController < ApplicationController
 
     def create
         @mood = @day.moods.new(mood_params)
-        if @mood.save
+        if @day
+            @mood.save
             render json: @day
         else
             render json: {error: 'Error creating new mood'}
