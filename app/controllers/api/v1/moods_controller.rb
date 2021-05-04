@@ -23,16 +23,16 @@ class Api::V1::MoodsController < ApplicationController
     end
 
     def destroy
-        @mood = Mood.find(params['id'])
-        @day = Day.find(@mood.day_id)
-        @mood.destroy
-        render json: @day
+        mood = Mood.find(params['id'])
+        day = Day.find(mood.day_id)
+        mood.destroy
+        render json: day
     end
 
     private
     
     def mood_params
-        params.require(:mood).permit(:happy_rating, :relaxed_rating, :awake_rating, :calm_rating, :confidence_rating, :journal_entry, :day_id)
+        params.require(:mood).permit(:created_at, :happy_rating, :relaxed_rating, :awake_rating, :calm_rating, :confidence_rating, :journal_entry, :day_id)
     end
 
     def set_day
