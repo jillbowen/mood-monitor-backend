@@ -19,10 +19,6 @@ class Api::V1::DaysController < ApplicationController
         render json: @day
     end
 
-    def destroy
-        @day.destroy
-    end
-
     private
     
     def day_params
