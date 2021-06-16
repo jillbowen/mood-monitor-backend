@@ -14,6 +14,6 @@ Seed some data if you want to see examples of how your mood check-ins will look 
 
 Start the server: rails s
 
-And then head over to the front end: https://github.com/jillbowen/mood_monitor_frontend
+And then head over to the front end: https://github.com/jillbowen/mood-monitor-frontend
 
 Enjoy! 
