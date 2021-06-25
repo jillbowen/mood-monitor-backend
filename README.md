@@ -27,7 +27,7 @@ Enjoy!
 2. Create a branch ```git checkout -b <branch_name>```
 3. Make your changes
 4. Commit changes ```git commit -m ''```
-5. Push to the original branch ```git push origin <project_name>/```
+5. Push to the original branch ```git push origin <project_name>/<location>```
 6. Create the pull request
 
 Or, see Github's documentation: [Creating a pull request](https://help.github.com/en/github/collaborating-with-issues-and-pull-requests/creating-a-pull-request)
